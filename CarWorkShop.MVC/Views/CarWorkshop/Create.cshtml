@@ -1,0 +1,90 @@
+﻿@using CarWorkShop.Application.CarWorkshop.Commands.CreateCarWorkshop
+
+
+@model CreateCarWorkshopCommand
+
+<h1>Create Car Workshop</h1>
+
+<hr />
+
+<div class="row">
+    <form action="/CarWorkshop/Create" method="post">
+        <div class="form-group mb-3">
+            <label class="control-label" for="Name" asp-for="Name">Name</label>
+            <input class="form-control" type="text" asp-for="Name"  name="Name" />
+            <span asp-validation-for="Name" class="text-danger" ></span>
+
+
+        </div>
+
+        <div class="form-group mb-3">
+            <label class="control-label" for="Description" asp-for="Description">Description</label>
+            <input class="form-control" type="text" asp-for="Description" name="Description" />
+            <span asp-validation-for="Description" class="text-danger"></span>
+
+        </div>
+
+
+        <div class="form-group mb-3">
+            <label class="control-label" for="About" asp-for="About">About</label>
+            <input class="form-control" type="text" asp-for="About" name="About" />
+
+
+        </div>
+
+
+        <div class="form-group mb-3">
+            <label class="control-label" for="phoneNumber" asp-for="phoneNumber">phoneNumber</label>
+            <input class="form-control" type="text" asp-for="phoneNumber" name="phoneNumber" />
+            <span asp-validation-for="phoneNumber" class="text-danger"></span>
+
+        </div>
+
+
+        <div class="form-group mb-3">
+            <label class="control-label" for="Street" asp-for="Street">Street</label>
+            <input class="form-control" type="text" asp-for="Street" name="Street" />
+
+
+        </div>
+
+
+        <div class="form-group mb-3">
+            <label class="control-label" for="City" asp-for="City">City</label>
+            <input class="form-control" type="text" asp-for="City" name="City" />
+
+
+        </div>
+
+
+        <div class="form-group mb-3">
+            <label class="control-label" for="PostalCode" asp-for="PostalCode">PostalCode</label>
+            <input class="form-control" type="text" asp-for="PostalCode" name="PostalCode" />
+
+
+        </div>
+        <div class="form-group mb-3">
+            <label class="control-label" for="Kolumna2" asp-for="Kolumna2">Kolumna2</label>
+            <input class="form-control" type="text" asp-for="Kolumna2" name="Kolumna2" />
+
+
+        </div>
+        <div class="form-group mb-3">
+            
+            <input class="btn btn-primary" type="submit" value="Create" />
+
+
+        </div>
+
+    </form>
+</div>
+
+
+@section Scripts {
+
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+
+    }
+
+}
